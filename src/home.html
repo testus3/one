@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Scryper"})
+
+    @@include('./partials/head-css.html')
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script  src="assets/js/environment.js"></script>
+    <!-- carousel logo -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-100%)' },
+                        }
+                    }                    
+                },
+            },
+        };
+    </script>
+</head>
+
+<body>
+
+    @@include('./partials/navbar.html', {"link-color": "light"})
+
+    <!-- =========== Hero Section Starts =========== -->
+    <section class="relative pt-44 pb-36 bg-gradient-to-t from-slate-500/10 overflow-x-hidden">
+        <div class="container">
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-16 items-center">
+                <div>
+                    <h1 class="md:text-5xl/tight text-3xl font-semibold text-gray-700 mb-7">
+                        Unleashing Tomorrow's Web Solutions with AI for your
+                        <span class="typewrite capitalize relative after:absolute after:inset-x-0 after:bottom-2 after:bg-green-400/40 after:h-11 after:w-full after:-z-10" data-period="2000" data-type='[ "SaaS", "Mobile App", "Startup", "Business"]'>
+                            <span class="wrap"></span>
+                        </span>
+                    </h1>
+
+                    <p class="text-slate-500 leading-7">Welcome to the forefront of digital transformation! At our software company, we're pioneers in developing cutting-edge websites for mobile and desktop applications, and we do it with the power of AI.</p>
+                    <div class="flex flex-wrap items-center gap-5 mt-16">
+                        <a href="#demo" class="py-3 px-6 rounded border border-primary text-white bg-primary hover:shadow-lg hover:shadow-primary/50 focus:outline focus:outline-primary/50 transition-all duration-500">View Demos <i class="fa-solid fa-arrow-down ms-2"></i></a>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <div class="relative">
+
+                        <div class="hidden sm:block">
+                            <div class="before:w-24 before:h-24 before:absolute before:-bottom-8 before:-start-8 before:bg-[url('../images/pattern/dot2.svg')]"></div>
+                            <div class="after:w-24 after:h-24 after:absolute after:-top-10 after:end-10 2xl:after:end-0 after:rotate-45 after:bg-[url('../images/pattern/dot5.svg')]"></div>
+                        </div>
+
+                        <div id="swiper_one" class="swiper border-[6px] border-white bg-white 2xl:w-[140%] shadow" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="assets/images/demo/home-app.jpg" alt="saas1" class="w-full h-full rounded-md">
+                                </div>
+
+
+                                <!-- <div class="swiper-slide">
+                                    <img src="assets/images/demo/home-portfolio.jpg" alt="saas3" class="w-full h-full rounded-md">
+                                </div> -->
+
+                                <div class="swiper-slide">
+                                    <img src="assets/images/demo/home-saas.jpg" alt="saas2" class="w-full h-full rounded-md">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/images/demo/home-marketing.jpg" alt="saas3" class="w-full h-full rounded-md">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/images/demo/home-saas2.jpg" alt="saas3" class="w-full h-full rounded-md">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =========== Hero Section Ends =========== -->
+
+
+    <!-- =========== Stack Section Starts =========== -->
+    <section>
+        <div class="w-full max-w-5xl mx-auto px-4 md:px-6 py-24">
+            <div class="text-center">
+
+                <!-- Logo Carousel animation -->
+                <div class="text-center -mt-10 mb-10">
+                    <span class="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">#technologies</span>
+                </div>
+                <div
+                    x-data="{}"
+                    x-init="$nextTick(() => {
+                        let ul = $refs.logos;
+                        ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                        ul.nextSibling.setAttribute('aria-hidden', 'true');
+                    })"
+                    class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+                >
+                    <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+                        <li>
+                            <img src="./assets/images/stacks/react-original.svg" alt="React" width="55px" height="55px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/nodejs-plain.svg" alt="Node" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/npm-original.svg" alt="Npm" width="60px" height="60px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/django-plain.svg" alt="Django" width="40px" height="40px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/kubernetes-plain.svg" alt="Kubernetes" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/tailwindcss-plain.svg" alt="Tailwind" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/express-original.svg" alt="Express" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/spring-original.svg" alt="Spring" width="45px" height="45px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/sass-original.svg" alt="Sass" width="60px" height="60px" />
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/terraform-original.svg" alt="Terraform" width="48px" height="48px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/postgresql-plain.svg" alt="Postgresql" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/postman.svg" alt="Postman" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/mongodb-original.svg" alt="Mongo" width="55px" height="55px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/docker-original.svg" alt="Docker" width="60px" height="60px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/nextjs-original.svg" alt="Next" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/flutter-original.svg" alt="Flutter" width="40px" height="40px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/git-original.svg" alt="Git" width="45px" height="45px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/figma-original.svg" alt="Figma" width="40px" height="40px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/aws-original.svg" alt="Aws" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/bootstrap-plain.svg" alt="Bootstrap" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/cloudinary-original.svg" alt="Cloudinary" width="55px" height="55px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/azure-original.svg" alt="Azure" width="45px" height="45px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/jira-original.svg" alt="Jira" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/jest-plain.svg" alt="Jest" width="44px" height="44px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/mysql-original.svg" alt="Mysql" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/supabase-original.svg" alt="Supabase" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/redis-original.svg" alt="Redis" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/bitbucket-original.svg" alt="Bitbuket" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/openai-original.svg" alt="OpenAI" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/pytorch-original.svg" alt="OpenAI" width="50px" height="50px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/tensorflow-original.svg" alt="OpenAI" width="45px" height="45px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/keras-original.svg" alt="OpenAI" width="45px" height="45px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/inkscape-original.svg" alt="Inkscape" width="48px" height="48px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/kdenlive-original.svg" alt="Kdenlive" width="55px" height="55px"/>
+                        </li>
+                        <li>
+                            <img src="./assets/images/stacks/aftereffects-original.svg" alt="After-effects" width="45px" height="45px"/>
+                        </li>
+                    </ul>                
+                </div>
+                <!-- End: Logo Carousel animation -->
+                
+            </div>
+
+        </div>
+    </section>
+    <!-- =========== Stack Section Ends ========== -->
+
+
+    <!-- =========== services Section Start =========== -->
+    <section class="py-20" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="text-3xl font-medium">What We Do</h1>
+                <p class="font-medium text-slate-500 mt-5 mb-4">We are helping businesses to develop their web applications</p>
+            </div>
+
+            <div class="grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 pt-12 gap-4">
+                <div class="p-6 flex items-center gap-5 p-5 hover:bg-white rounded-md hover:shadow-xl transition-all duration-500" data-aos="fade-up" data-aos-duration="500">
+                    <img src="assets/images/do/web-design.png" class="w-32">
+                    <div>
+                        <h4 class="text-base font-medium my-5">Web Design</h4>
+                        <p class="text-slate-400">Innovative web design solutions, enhancing online presence. Our software company crafts visually stunning and user-friendly websites for optimal digital experiences and business success.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 flex items-center gap-5 p-5 hover:bg-white rounded-md hover:shadow-xl transition-all duration-500" data-aos="fade-up" data-aos-duration="500">
+                    <img src="assets/images/do/uiux.png" class="w-32">
+                    <div>
+                        <h4 class="text-base font-medium my-5">User Experience/Interfase Design</h4>
+                        <p class="text-slate-400">Leading UI/UX design firm creating seamless digital interactions. Elevate user experiences with our software company's intuitive designs for enhanced usability and aesthetic appeal.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 flex items-center gap-5 p-5 hover:bg-white rounded-md hover:shadow-xl transition-all duration-500" data-aos="fade-up" data-aos-duration="500">
+                    <img src="assets/images/do/frontend.png" class="w-32">
+                    <div>
+                        <h4 class="text-base font-medium my-5">Front-end Development</h4>
+                        <p class="text-slate-400">Specializing in front-end excellence, our software company transforms designs into responsive, high-performance user interfaces, ensuring seamless and engaging digital experiences.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 flex items-center gap-5 p-5 hover:bg-white rounded-md hover:shadow-xl transition-all duration-500" data-aos="fade-up" data-aos-duration="500">
+                    <img src="assets/images/do/backend.png" class="w-32">
+                    <div>
+                        <h4 class="text-base font-medium my-5">Back-end Development</h4>
+                        <p class="text-slate-400">Back-end mastery defines our software company. We architect robust, scalable solutions, powering applications with efficient server-side development for optimal performance and data management.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 flex items-center gap-5 p-5 hover:bg-white rounded-md hover:shadow-xl transition-all duration-500" data-aos="fade-up" data-aos-duration="500">
+                    <img src="assets/images/do/api2.png" class="w-32">
+                    <div>
+                        <h4 class="text-base font-medium my-5">API Design</h4>
+                        <p class="text-slate-400">Crafting smooth connections, our software company specializes in API design. We architect and optimize interfaces, facilitating efficient communication and integration for enhanced software functionality.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 flex items-center gap-5 p-5 hover:bg-white rounded-md hover:shadow-xl transition-all duration-500" data-aos="fade-up" data-aos-duration="500">
+                    <img src="assets/images/do/ai.png" class="w-32">
+                    <div>
+                        <h4 class="text-base font-medium my-5">AI Web Integration</h4>
+                        <p class="text-slate-400">Pioneering AI web integration, our software company enhances online platforms with intelligent capabilities. Elevate user experiences through seamless integration of cutting-edge artificial intelligence technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =========== services Section End =========== -->
+
+     <!-- =========== portfolio Section Start =========== -->
+     <section class="py-20" id="projects">
+        <div class="container">
+            <div class="text-center">
+                <span class="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">Latest</span>
+                <h1 class="text-3xl font-medium my-3">Featured Projects</h1>
+                <p class="font-medium text-slate-400 mt-5 mb-4">Explore some of our latest website projects</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-6" data-aos="fade-up" data-aos-duration="600">
+                <div class="group relative mt-12 hover:opacity-80">
+                    <div class="pt-12 ps-12 group-hover:bg-white/10 rounded-md group-hover:shadow-lg transition-all duration-300">
+                        <div >
+                            <div class="flex items-center mb-7 flex justify-between">
+                                <h3 class="text-xl">Car Rental</h3>
+                                <div class="font-medium text-slate-500 flex flex-row ">
+                                    <img src="https://img.shields.io/badge/React-61DAFB.svg?style=flat-square&logo=React&logoColor=black" alt="React" />
+                                    <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=green" alt="Django" />
+                                    <img src="https://img.shields.io/badge/Tailwind-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind" />
+                                    <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" alt="Tailwind" />
+                                    <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonaws&logoColor=white" alt="Tailwind" />
+                                </div>
+                            </div>
+                            <div>
+                                <img src="assets/images/features/agency3.jpg" class="rounded-md">
+                            </div>
+                            <div class="absolute inset-0 group-hover:flex items-center justify-center hidden transition-all duration-300">
+                                <<a href="https://aws-car-sale.s3.us-west-2.amazonaws.com/" target="_blank" class="inline-block z-10">
+                                    <div class="flex items-center gap-3 py-[6px] px-3 bg-black rounded-md">
+                                        <p class="text-sm font-semibold text-white">View Project</p>
+                                        <i class="fa-solid fa-arrow-right text-white"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 group-hover:bg-slate-300/20 transition-all duration-300"></div>
+                </div>
+
+                <div class="group relative mt-12 hover:opacity-80">
+                    <div class="pt-12 ps-12 group-hover:bg-white/10 rounded-md group-hover:shadow-lg transition-all duration-300">
+                        <div >
+                            <div class="flex items-center mb-7 flex justify-between">
+                                <h3 class="text-xl">Ecommerce</h3>
+                                <div class="font-medium text-slate-500 flex flex-row ">
+                                    <img src="https://img.shields.io/badge/NodeJS-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="React" />
+                                    <img src="https://img.shields.io/badge/ExpressJS-000000?style=flat-square&logo=express&logoColor=white" alt="Django" />
+                                    <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=flat-square&logo=bootstrap&logoColor=white" alt="Tailwind" />
+                                    <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white" alt="Tailwind" />
+                                    <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonaws&logoColor=white" alt="Tailwind" />
+                                </div>
+                            </div>
+                            <div>
+                                <img src="assets/images/features/agency4.jpg" class="rounded-md">
+                            </div>
+                            <div class="absolute inset-0 group-hover:flex items-center justify-center hidden transition-all duration-300 ">
+                                <a href="https://aws-shop.s3.us-west-2.amazonaws.com/" target="_blank" class="inline-block z-10">
+                                    <div class="flex items-center gap-3 py-[6px] px-3 bg-black rounded-md ">
+                                        <p class="text-sm font-semibold text-white">View Project</p>
+                                        <i class="fa-solid fa-arrow-right text-white"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 group-hover:bg-slate-300/20 transition-all duration-300"></div>
+                </div>
+            </div>
+
+            <!-- <div class="grid lg:grid-cols-2 grid-cols-1 gap-6" data-aos="fade-up" data-aos-duration="800">
+                <div class="group relative mt-12 hover:opacity-80">
+                    <div class="pt-12 ps-12 group-hover:bg-white/10 rounded-md group-hover:shadow-lg transition-all duration-300">
+                        <div >
+                            <div class="flex items-center justify-between mb-7">
+                                <h3 class="text-xl">Project 3</h3>
+                                <p class="font-medium text-slate-500 pe-8">Branding, Interaction, Web Design</p>
+                            </div>
+                            <div>
+                                <img src="assets/images/features/agency2.jpg" class="rounded-md">
+                            </div>
+                            <div class="absolute inset-0 group-hover:flex items-center justify-center hidden transition-all duration-300">
+                                <a href="#" class="inline-block">
+                                    <div class="flex items-center gap-3 py-[6px] px-3 bg-black rounded-md">
+                                        <p class="text-sm font-semibold text-white">View Project</p>
+                                        <i class="fa-solid fa-arrow-right text-white"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 group-hover:bg-slate-300/20 transition-all duration-300"></div>
+                </div>
+
+                <div class="group relative mt-12 hover:opacity-80">
+                    <div class="pt-12 ps-12 group-hover:bg-white/10 rounded-md group-hover:shadow-lg transition-all duration-300">
+                        <div >
+                            <div class="flex items-center justify-between mb-7">
+                                <h3 class="text-xl">Project 4</h3>
+                                <p class="font-medium text-slate-500 pe-8"> Branding, Web Design & Development</p>
+                            </div>
+                            <div>
+                                <img src="assets/images/features/agency1.jpg" class="rounded-md">
+                            </div>
+                            <div class="absolute inset-0 group-hover:flex items-center justify-center hidden transition-all duration-300">
+                                <a href="#" class="inline-block">
+                                    <div class="flex items-center gap-3 py-[6px] px-3 bg-black rounded-md">
+                                        <p class="text-sm font-semibold text-white">View Project</p>
+                                        <i class="fa-solid fa-arrow-right text-white"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 group-hover:bg-slate-300/20 transition-all duration-300"></div>
+                </div>
+            </div> -->
+
+
+
+            <div class="flex justify-center mt-14">
+                <a href="#" class="py-3 px-6 rounded border border-black hover:border-black hover:bg-black hover:text-white hover:shadow-lg hover:shadow-black/50 focus:outline focus:outline-black/50 transition-all duration-500">Explore All Work <i class="fa-solid fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- =========== portfolio Section End =========== -->
+
+
+    <!-- =========== Contact Us Start =========== -->
+    <section class="lg:pb-24 py-20 relative" id="contact">
+        <div class="container">
+
+            <div class="text-center">
+                <span class="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">Communication</span>
+                <h1 class="text-3xl font-medium my-3">Contact Us</h1>
+                <p class="font-medium text-slate-400 mt-5 mb-4">We are always thrilled to chat!</p>
+            </div>
+
+            <div class="lg:flex align-items-center py-10">
+                <div class="lg:w-1/2">
+                    <div class="mb-6 relative bg-clip-border rounded-[0.1875rem]">
+                        <div class="py-12">
+                            <h2 class="mb-4 text-2xl/6 mt-0 font-medium">Let's Talk Further</h2>
+                            <p class="mb-12 text-base/6">Please fill out the following form and we will get back to you shortly</p>
+
+                            <form>
+                                <div class="flex gap-6">
+                                    <div class="md:w-1/2">
+                                        <div class="mb-5">
+                                            <label for="exampleInputName1" class="block text-sm font-medium mb-1 text-gray-600">Name <span class="text-red-500">*</span></label>
+                                            <input type="text" class="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0" id="exampleInputName1" placeholder="Your Name">
+                                        </div>
+                                    </div>
+                                    <div class="md:w-1/2">
+                                        <div class="mb-5">
+                                            <label for="exampleInputName" class="block text-sm font-medium mb-1 text-gray-600">Name <span class="text-red-500">*</span></label>
+                                            <input type="text" class="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0" id="exampleInputName" placeholder="Your Name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="mb-5">
+                                        <label for="exampleInputEmail1" class="block text-sm font-medium mb-1 text-gray-600">Email <span class="text-red-500">*</span></label>
+                                        <input type="email" class="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0" id="exampleInputEmail1" placeholder="Your Email">
+                                    </div>
+                                    <div class="mb-5">
+                                        <label for="exampleFormControlTextarea1" class="block text-sm font-medium mb-1 text-gray-600">Message <span class="text-red-500">*</span></label>
+                                        <textarea class="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0" id="exampleFormControlTextarea1" rows="4" placeholder="Type Your Massage..."></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" style="background-color: #2563eb" class="inline-flex items-center text-sm bg-primary text-white font-medium leading-6 text-center align-middle select-none py-2 px-4 rounded-md transition-all hover:shadow-lg hover:shadow-primary/80">
+                                    Send
+                                    <span class="w-4 h-4 ms-1">
+                                        <svg class="w-full h-full text-white" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                                                <path d="M3,13.5 L19,12 L3,10.5 L3,3.7732928 C3,3.70255344 3.01501031,3.63261921 3.04403925,3.56811047 C3.15735832,3.3162903 3.45336217,3.20401298 3.70518234,3.31733205 L21.9867539,11.5440392 C22.098181,11.5941815 22.1873901,11.6833905 22.2375323,11.7948177 C22.3508514,12.0466378 22.2385741,12.3426417 21.9867539,12.4559608 L3.70518234,20.6826679 C3.64067359,20.7116969 3.57073936,20.7267072 3.5,20.7267072 C3.22385763,20.7267072 3,20.5028496 3,20.2267072 L3,13.5 Z" id="Combined-Shape" fill="currentcolor"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-5/12 ms-auto overflow-x-hidden">
+                    <div class="h-[520px]">
+                        <div id="marker-map5" class="h-100" data-toggle="map" data-map='{"mapCenter": [40.749179, -73.989276], "zoom": 12, "useTextIcon": false, "interactive": true, "geojson": "/assets/sample-listing-geojson.json" }'>
+                            <iframe class="w-full h-[500px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1632.3469047987105!2d-106.65062251532308!3d35.089382461915875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87220cb8289af903%3A0x8fa1838f799aaa8d!2s500%204th%20St%20NW%2C%20Albuquerque%2C%20NM%2087102%2C%20USA!5e0!3m2!1sen!2spe!4v1707953825965!5m2!1sen!2spe" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <div class="flex mb-3">
+                    <span class="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-lg relative me-4 shrink-0">
+                        <svg class="w-7 h-7 text-primary" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                                <path d="M12.7037037,14 L15.6666667,10 L13.4444444,10 L13.4444444,6 L9,12 L11.2222222,12 L11.2222222,14 L6,14 C5.44771525,14 5,13.5522847 5,13 L5,3 C5,2.44771525 5.44771525,2 6,2 L18,2 C18.5522847,2 19,2.44771525 19,3 L19,13 C19,13.5522847 18.5522847,14 18,14 L12.7037037,14 Z" id="Combined-Shape" fill="currentcolor" opacity="0.3"></path>
+                                <path d="M9.80428954,10.9142091 L9,12 L11.2222222,12 L11.2222222,16 L15.6666667,10 L15.4615385,10 L20.2072547,6.57253826 C20.4311176,6.4108595 20.7436609,6.46126971 20.9053396,6.68513259 C20.9668779,6.77033951 21,6.87277228 21,6.97787787 L21,17 C21,18.1045695 20.1045695,19 19,19 L5,19 C3.8954305,19 3,18.1045695 3,17 L3,6.97787787 C3,6.70173549 3.22385763,6.47787787 3.5,6.47787787 C3.60510559,6.47787787 3.70753836,6.51099993 3.79274528,6.57253826 L9.80428954,10.9142091 Z" id="Combined-Shape" fill="currentcolor"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <div class="grow">
+                        <h5 class="text-base text-gray-700">Email</h5>
+                        <a href="#" class="text-gray-500 my-1">contact@scryper-dev.com</a>
+                    </div>
+                </div>
+
+                <div class="flex mb-3">
+                    <span class="flex items-center justify-center w-12 h-12 bg-orange-500/20 rounded-lg relative me-4 shrink-0">
+                        <svg class="w-7 h-7 text-orange-500" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                                <path d="M13.0799676,14.7839934 L15.2839934,12.5799676 C15.8927139,11.9712471 16.0436229,11.0413042 15.6586342,10.2713269 L15.5337539,10.0215663 C15.1487653,9.25158901 15.2996742,8.3216461 15.9083948,7.71292558 L18.6411989,4.98012149 C18.836461,4.78485934 19.1530435,4.78485934 19.3483056,4.98012149 C19.3863063,5.01812215 19.4179321,5.06200062 19.4419658,5.11006808 L20.5459415,7.31801948 C21.3904962,9.0071287 21.0594452,11.0471565 19.7240871,12.3825146 L13.7252616,18.3813401 C12.2717221,19.8348796 10.1217008,20.3424308 8.17157288,19.6923882 L5.75709327,18.8875616 C5.49512161,18.8002377 5.35354162,18.5170777 5.4408655,18.2551061 C5.46541191,18.1814669 5.50676633,18.114554 5.56165376,18.0596666 L8.21292558,15.4083948 C8.8216461,14.7996742 9.75158901,14.6487653 10.5215663,15.0337539 L10.7713269,15.1586342 C11.5413042,15.5436229 12.4712471,15.3927139 13.0799676,14.7839934 Z" id="Path-76" fill="currentcolor"></path>
+                                <path d="M14.1480759,6.00715131 L13.9566988,7.99797396 C12.4781389,7.8558405 11.0097207,8.36895892 9.93933983,9.43933983 C8.8724631,10.5062166 8.35911588,11.9685602 8.49664195,13.4426352 L6.50528978,13.6284215 C6.31304559,11.5678496 7.03283934,9.51741319 8.52512627,8.02512627 C10.0223249,6.52792766 12.0812426,5.80846733 14.1480759,6.00715131 Z M14.4980938,2.02230302 L14.313049,4.01372424 C11.6618299,3.76737046 9.03000738,4.69181803 7.1109127,6.6109127 C5.19447112,8.52735429 4.26985715,11.1545872 4.51274152,13.802405 L2.52110319,13.985098 C2.22450978,10.7517681 3.35562581,7.53777247 5.69669914,5.19669914 C8.04101739,2.85238089 11.2606138,1.72147333 14.4980938,2.02230302 Z" id="Combined-Shape" fill="currentcolor" opacity="0.3"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <div class="grow">
+                        <h5 class="text-base text-gray-700">Phone</h5>
+                        <a href="#" class="text-gray-500 my-1">+1 (505) 394 – 9480</a>
+                    </div>
+                </div>
+
+                <div class="flex mb-3">
+                    <span class="flex items-center justify-center w-12 h-12 bg-teal-500/20 rounded-lg relative me-4 shrink-0">
+                        <svg class="w-7 h-7 text-teal-500" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                                <path d="M5,10.5 C5,6 8,3 12.5,3 C17,3 20,6.75 20,10.5 C20,12.8325623 17.8236613,16.03566 13.470984,20.1092932 C12.9154018,20.6292577 12.0585054,20.6508331 11.4774555,20.1594925 C7.15915182,16.5078313 5,13.2880005 5,10.5 Z M12.5,12 C13.8807119,12 15,10.8807119 15,9.5 C15,8.11928813 13.8807119,7 12.5,7 C11.1192881,7 10,8.11928813 10,9.5 C10,10.8807119 11.1192881,12 12.5,12 Z" id="Combined-Shape" fill="currentcolor"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <div class="grow">
+                        <h5 class="text-base text-gray-700">Address</h5>
+                        <a href="#" class="text-gray-500 my-1">500 4TH ST NW, Albuquerque, NM</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =========== Contact Us End =========== -->
+
+
+    <!-- =========== demos Section Starts =========== -->
+    <section class="py-16" id="new">
+        <div class="container">
+            <div class="text-center">
+                <span class="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">New</span>
+                <h1 class="text-4xl my-4">Admin Pages</h1>
+                <p class="text-slate-500 mb-14">Modern landing pages available for every need</p>
+            </div>
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-6" data-aos="fade-up" data-duration="600">
+                <a href="dashboard.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/dashboard.png">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Dashboard</h4>
+                </a>
+
+                <a href="account-settings.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/account.png">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Account Settings</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- =========== demos Section Ends =========== -->
+    
+    <!-- =========== demos Section Starts =========== -->
+    <section class="py-20" id="demo">
+        <div class="container">
+            <div class="text-center">
+                <span class="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">Demos</span>
+                <h1 class="text-4xl my-4">Landing Pages</h1>
+                <p class="text-slate-500 mb-14">Modern landing pages available for every need</p>
+            </div>
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-6" data-aos="fade-up" data-duration="600">
+                <a href="home-app.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/home-app.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Mobile App</h4>
+                </a>
+
+                <a href="home-saas.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/home-saas.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Saas Modern</h4>
+                </a>
+
+                <a href="home-saas2.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/home-saas2.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Saas Classic</h4>
+                </a>
+
+                <a href="home-startup.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/home-startup.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Startup</h4>
+                </a>
+
+                <a href="home-software.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/home-software.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Software</h4>
+                </a>
+
+                <a href="home-agency.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/home-agency.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Agency</h4>
+                </a>
+
+                <a href="home-coworking.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/home-coworking.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Co-Working</h4>
+                </a>
+
+                <a href="home-crypto.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/home-crypto.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Crypto</h4>
+                </a>
+
+                <a href="home-marketing.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/home-marketing.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Marketing</h4>
+                </a>
+
+                <a href="home-portfolio.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/home-portfolio.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Portfolio</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- =========== demos Section Ends =========== -->
+
+    <!-- =========== showcase Section Starts =========== -->
+    <section class="py-20">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <span class="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">Inner Pages</span>
+                <h1 class="text-4xl mt-4 mb-14">Inner Pages</h1>
+            </div>
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-6" data-aos="fade-up" data-duration="600">
+                <a href="company.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/company.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Company</h4>
+                </a>
+
+                <a href="contact.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/contact.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Contact</h4>
+                </a>
+
+                <a href="career.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/career.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Career</h4>
+                </a>
+
+                <a href="blog.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/blog.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Blog</h4>
+                </a>
+
+                <a href="blog-post.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/blog-post.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Blog Post</h4>
+                </a>
+
+                <a href="portfolio-grid.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/portfolio-grid.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Portfolio Grid</h4>
+                </a>
+
+                <a href="portfolio-masonry.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/portfolio-masonry.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Portfolio Masonry</h4>
+                </a>
+
+                <a href="portfolio-item.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/portfolio-item.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Portfolio Item</h4>
+                </a>
+
+                <a href="pricing.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/pricing.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Pricing</h4>
+                </a>
+
+                <a href="help.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/help.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Help</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- =========== showcase Section Ends =========== -->
+
+    <!-- =========== Auth pages Section Starts =========== -->
+    <section class="py-20">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <span class="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">Account Pages</span>
+                <h1 class="text-4xl mt-4 mb-14">Auth Pages</h1>
+            </div>
+
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-6" data-aos="fade-up" data-duration="600">
+                <a href="account-login.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/auth-login.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Login</h4>
+                </a>
+
+                <a href="account-signup.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/auth-signup.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Signup</h4>
+                </a>
+
+                <a href="account-forget-password.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/auth-password.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Forget Password</h4>
+                </a>
+
+                <a href="account-confirm.html" target="_blank">
+                    <div class="border p-2 rounded">
+                        <img src="assets/images/demo/auth-confirm.jpg">
+                    </div>
+                    <h4 class="text-base text-center mt-4">Confirm Account</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- =========== Auth pages Section Ends =========== -->
+
+
+
+    <!-- =========== features Section Starts =========== -->
+    <section class="py-20 bg-primary/10" data-aos="fade-up" >
+        <div class="container">
+            <div class="text-center">
+                <span class="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">Features</span>
+                <h1 class="text-4xl my-4">Why Choose Scryper</h1>
+                <p class="text-slate-500 mb-14">A modern design, fresh look and feel</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
+
+                <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="600">
+                    <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
+                        <svg class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33">
+                            <g clip-path="url(#prefix__clip0)">
+                                <path fill="#38bdf8" fill-rule="evenodd" d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z" clip-rule="evenodd" />
+                            </g>
+                            <defs>
+                                <clipPath id="prefix__clip0">
+                                    <path fill="#fff" d="M0 0h54v32.4H0z" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </span>
+                    <h5>Exceptional UI/UX Design</h5>
+                </div>
+
+                <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="600">
+                    <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
+                        <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                                <path d="M8,2.5 C7.30964406,2.5 6.75,3.05964406 6.75,3.75 L6.75,20.25 C6.75,20.9403559 7.30964406,21.5 8,21.5 L16,21.5 C16.6903559,21.5 17.25,20.9403559 17.25,20.25 L17.25,3.75 C17.25,3.05964406 16.6903559,2.5 16,2.5 L8,2.5 Z" id="Combined-Shape" fill="currentcolor" opacity="0.3"></path>
+                                <path d="M8,2.5 C7.30964406,2.5 6.75,3.05964406 6.75,3.75 L6.75,20.25 C6.75,20.9403559 7.30964406,21.5 8,21.5 L16,21.5 C16.6903559,21.5 17.25,20.9403559 17.25,20.25 L17.25,3.75 C17.25,3.05964406 16.6903559,2.5 16,2.5 L8,2.5 Z M8,1 L16,1 C17.5187831,1 18.75,2.23121694 18.75,3.75 L18.75,20.25 C18.75,21.7687831 17.5187831,23 16,23 L8,23 C6.48121694,23 5.25,21.7687831 5.25,20.25 L5.25,3.75 C5.25,2.23121694 6.48121694,1 8,1 Z M9.5,1.75 L14.5,1.75 C14.7761424,1.75 15,1.97385763 15,2.25 L15,3.25 C15,3.52614237 14.7761424,3.75 14.5,3.75 L9.5,3.75 C9.22385763,3.75 9,3.52614237 9,3.25 L9,2.25 C9,1.97385763 9.22385763,1.75 9.5,1.75 Z" id="Combined-Shape" fill="currentcolor"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <h5>Fully Responsive</h5>
+                </div>
+
+                <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="600">
+                    <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
+                        <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                                <rect id="Rectangle-7-Copy" fill="currentcolor" x="2" y="5" width="19" height="4" rx="1"></rect>
+                                <rect id="Rectangle-7-Copy-4" fill="currentcolor" opacity="0.3" x="2" y="11" width="19" height="10" rx="1"></rect>
+                            </g>
+                        </svg>
+                    </span>
+                    <h5>Cross-browser compatible</h5>
+                </div>
+
+                <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="900">
+                    <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
+                        <span class="text-xl font-semibold text-primary">S</span>
+                    </span>
+                    <h5>Cutting-edge Technology Stack</h5>
+                </div>
+
+                <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="900">
+                    <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
+                        <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                                <path d="M12,20 C7.581722,20 4,16.418278 4,12 C4,7.581722 7.581722,4 12,4 C16.418278,4 20,7.581722 20,12 C20,16.418278 16.418278,20 12,20 Z M12,5.99999664 C8.6862915,6 6,8.6862915 6,12 C6,15.3137085 8.6862915,18 12,18.0000034 L12,5.99999664 Z" id="Combined-Shape" fill="currentColor"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <h5>User-centric Design Philosophy</h5>
+                </div>
+
+                <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="900">
+                    <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
+                        <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                                <rect id="Combined-Shape" fill="currentColor" opacity="0.3" x="2" y="2" width="20" height="20" rx="10"></rect>
+                                <path d="M6.16794971,14.5547002 C5.86159725,14.0951715 5.98577112,13.4743022 6.4452998,13.1679497 C6.90482849,12.8615972 7.52569784,12.9857711 7.83205029,13.4452998 C8.9890854,15.1808525 10.3543313,16 12,16 C13.6456687,16 15.0109146,15.1808525 16.1679497,13.4452998 C16.4743022,12.9857711 17.0951715,12.8615972 17.5547002,13.1679497 C18.0142289,13.4743022 18.1384028,14.0951715 17.8320503,14.5547002 C16.3224187,16.8191475 14.3543313,18 12,18 C9.64566871,18 7.67758127,16.8191475 6.16794971,14.5547002 Z" id="Path-56" fill="currentColor"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <h5>Comprehensive Implementation</h5>
+                </div>
+
+                <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="1200">
+                    <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
+                        <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                                <path d="M17.2718029,8.68536757 C16.8932864,8.28319382 16.9124644,7.65031935 17.3146382,7.27180288 C17.7168119,6.89328641 18.3496864,6.91246442 18.7282029,7.31463817 L22.7282029,11.5646382 C23.0906029,11.9496882 23.0906029,12.5503176 22.7282029,12.9353676 L18.7282029,17.1853676 C18.3496864,17.5875413 17.7168119,17.6067193 17.3146382,17.2282029 C16.9124644,16.8496864 16.8932864,16.2168119 17.2718029,15.8146382 L20.6267538,12.2500029 L17.2718029,8.68536757 Z M6.72819712,8.6853647 L3.37324625,12.25 L6.72819712,15.8146353 C7.10671359,16.2168091 7.08753558,16.8496835 6.68536183,17.2282 C6.28318808,17.6067165 5.65031361,17.5875384 5.27179713,17.1853647 L1.27179713,12.9353647 C0.909397125,12.5503147 0.909397125,11.9496853 1.27179713,11.5646353 L5.27179713,7.3146353 C5.65031361,6.91246155 6.28318808,6.89328354 6.68536183,7.27180001 C7.08753558,7.65031648 7.10671359,8.28319095 6.72819712,8.6853647 Z" id="Combined-Shape" fill="currentColor"></path>
+                                <rect id="Rectangle-28" fill="currentColor" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-345.000000) translate(-12.000000, -12.000000) " x="11" y="4" width="2" height="16" rx="1"></rect>
+                            </g>
+                        </svg>
+                    </span>
+                    <h5>Scalability and Performance</h5>
+                </div>
+
+                <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="1200">
+                    <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
+                        <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                                <rect id="Rectangle-25" fill="currentColor" opacity="0.3" x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <polygon id="Path" fill="currentColor" opacity="0.3" points="4 20 10.5 11 17 20"></polygon>
+                                <polygon id="Path-Copy" fill="currentColor" points="11 20 15.5 14 20 20"></polygon>
+                                <circle id="Oval-76" fill="currentColor" opacity="0.3" cx="18.5" cy="8.5" r="1.5"></circle>
+                            </g>
+                        </svg>
+                    </span>
+                    <h5>Robust API Design</h5>
+                </div>
+
+                <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="1200">
+                    <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
+                        <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                                <path d="M9.26193932,16.6476484 C8.90425297,17.0684559 8.27315905,17.1196257 7.85235158,16.7619393 C7.43154411,16.404253 7.38037434,15.773159 7.73806068,15.3523516 L16.2380607,5.35235158 C16.6013618,4.92493855 17.2451015,4.87991302 17.6643638,5.25259068 L22.1643638,9.25259068 C22.5771466,9.6195087 22.6143273,10.2515811 22.2474093,10.6643638 C21.8804913,11.0771466 21.2484189,11.1143273 20.8356362,10.7474093 L17.0997854,7.42665306 L9.26193932,16.6476484 Z" id="Path-94-Copy" fill="currentColor" opacity="0.3" transform="translate(14.999995, 11.000002) rotate(-180.000000) translate(-14.999995, -11.000002) "></path>
+                                <path d="M4.26193932,17.6476484 C3.90425297,18.0684559 3.27315905,18.1196257 2.85235158,17.7619393 C2.43154411,17.404253 2.38037434,16.773159 2.73806068,16.3523516 L11.2380607,6.35235158 C11.6013618,5.92493855 12.2451015,5.87991302 12.6643638,6.25259068 L17.1643638,10.2525907 C17.5771466,10.6195087 17.6143273,11.2515811 17.2474093,11.6643638 C16.8804913,12.0771466 16.2484189,12.1143273 15.8356362,11.7474093 L12.0997854,8.42665306 L4.26193932,17.6476484 Z" id="Path-94" fill="currentColor" transform="translate(9.999995, 12.000002) rotate(-180.000000) translate(-9.999995, -12.000002) "></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <h5>AI and ML Integration Expertise</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =========== features Section Ends =========== -->
+
+
+    <!-- =========== Testimonials Section Start =========== -->
+    <section class="bg-gray-100 relative py-20 overflow-x-hidden" data-aos="fade-up" data-aos-duration="500">
+        <div class="absolute top-0 inset-x-0 hidden sm:block">
+            <img src="assets/images/shapes/white-wave.svg" alt="svg" class="w-full -scale-x-100">
+        </div>
+        <div class="container relative">
+
+            <div class="relative z-20">
+                <div class="flex items-center justify-between pb-14">
+                    <div>
+                        <span class="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">Testimonials</span>
+                        <h2 class="md:text-3xl text-xl font-semibold my-5">What people say</h2>
+                    </div>
+                    <div class="flex items-center gap-5">
+                        <div class="button-prev"><i class="fa-solid fa-arrow-left"></i></div>
+                        <div class="button-next "> <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="hidden sm:block">
+                        <div class="before:w-24 before:h-24 before:absolute before:-top-10 before:-end-10 before:bg-[url('../images/pattern/dot3.svg')]"></div>
+                        <div class="after:w-24 after:h-24 after:absolute after:-bottom-10 after:-start-10 after:bg-[url('../images/pattern/dot3.svg')]"></div>
+                    </div>
+
+                    <!-- Swiper -->
+                    <div id="swiper_three" class="swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="p-10 bg-white">
+                                    <p class="text-slate-800">I discovered Scryper earlier this year while trying to sort out the MVP for my company based in Sweden. The experience of consulting with them was truly enriching, as they provided detailed insights into the intricacies of deploying my Agro-Tech device. Through collaborative discussions, we not only conceptualized but successfully launched a customized website that seamlessly integrates my IoT devices into the cloud infrastructure.</p>
+                                    <div class="border-b border-gray-200 w-full my-7"></div>
+                                    <div class="flex items-center justify-between mt-5">
+                                        <div class="flex items-center gap-3">
+                                            <div>
+                                                <img src="assets/images/clients/client1.jpg" class="w-10 rounded-full">
+                                            </div>
+                                            <div>
+                                                <h6>John Stark</h6>
+                                                <p class="text-sm text-slate-500">Engineering Director</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="flex gap-1 items-center text-yellow-500 text-base">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="p-10 bg-white">
+                                    <p class="text-slate-800">My business had used an outdated but functional business website but the interface wasn't quite appealing to our customers' satisfaction. We met Jose at Scryper and he changed our perspective on how our website should look to gain more customers and keep the momentum, I have been working with Scryper and cannot recommend any other better service if someome wants to scale their business.</p>
+                                    <div class="border-b border-gray-200 w-full my-7"></div>
+                                    <div class="flex items-center justify-between mt-5">
+                                        <div class="flex items-center gap-3">
+                                            <div>
+                                                <img src="assets/images/clients/client2.jpg" class="w-10 rounded-full">
+                                            </div>
+                                            <div>
+                                                <h6>Cersei Lannister</h6>
+                                                <p class="text-sm text-slate-500">Senior Project Manager</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="flex gap-1 items-center text-yellow-500 text-base">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="p-10 bg-white">
+                                    <p class="text-slate-800">On behalf of our marketing team, I want to express our immense satisfaction with the website designed by Scryper. Tailored to meet the diverse needs of our business model, the site has garnered nothing but praise from those who rely on it daily. We extend our sincere thanks to you and your team for their patience and diligence in promptly addressing each of our requests during the development process. Your collaborative efforts have resulted in a website that not only meets but exceeds our expectations, playing a vital role in enhancing our online presence. We look forward to continued success with Scryper as our trusted digital partner.</p>
+                                    <div class="border-b border-gray-200 w-full my-7"></div>
+                                    <div class="flex items-center justify-between mt-5">
+                                        <div class="flex items-center gap-3">
+                                            <div>
+                                                <img src="assets/images/clients/client3.jpg" class="w-10 rounded-full">
+                                            </div>
+                                            <div>
+                                                <h6>Cersei Lannister</h6>
+                                                <p class="text-sm text-slate-500">Senior Project Manager</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="flex gap-1 items-center text-yellow-500 text-base">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="p-10 bg-white">
+                                    <p class="text-slate-800">Compared to the other companies we have used in the past, Scryper has been far and above the best in every area. While building our new website, the customer service has been prompt and straightforward and the actual services are well documented and logical to our needs. We are very excited to be working with each member of the team at Scryper. Over just a short period of time, I can tell that we are going to be doing business with them for a long time and will gladly recommend them to anyone… except our competition.</p>
+                                    <div class="border-b border-gray-200 w-full my-7"></div>
+                                    <div class="flex items-center justify-between mt-5">
+                                        <div class="flex items-center gap-3">
+                                            <div>
+                                                <img src="assets/images/clients/client4.jpg" class="w-10 rounded-full">
+                                            </div>
+                                            <div>
+                                                <h6>Cersei Lannister</h6>
+                                                <p class="text-sm text-slate-500">Senior Project Manager</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="flex gap-1 items-center text-yellow-500 text-base">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="swiper-slide">
+                                <div class="p-10 bg-white">
+                                    <p class="text-slate-800">We have been very happy with our new website! It looks professional and very easy to navigate. Our experience with the customer service at Scryper has been great. They handle things very efficiently and are available for any questions we have. They also keep us updated on monthly reports so we know how our site is doing. I would recommend Thrive to anyone looking for website design or SEO work!</p>
+                                    <div class="border-b border-gray-200 w-full my-7"></div>
+                                    <div class="flex items-center justify-between mt-5">
+                                        <div class="flex items-center gap-3">
+                                            <div>
+                                                <img src="assets/images/clients/client5.jpg" class="w-10 rounded-full">
+                                            </div>
+                                            <div>
+                                                <h6>Cersei Lannister</h6>
+                                                <p class="text-sm text-slate-500">Senior Project Manager</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="flex gap-1 items-center text-yellow-500 text-base">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="swiper-slide">
+                                <div class="p-10 bg-white">
+                                    <p class="text-slate-800">I have had many websites since the early 90s. Most were like pulling teeth to get developed. Not so with the Scryper team. These guys are true professionals in every aspect. They listened to my needs, offered relevant options, and were prompt to respond to all of my questions. This is hands down the most productive site I have ever designed for my company. Kudos to the Scryper folks for making it happen! I will be pursuing future projects with them and highly recommend them to anyone in the market for a professional website.</p>
+                                    <div class="border-b border-gray-200 w-full my-7"></div>
+                                    <div class="flex items-center justify-between mt-5">
+                                        <div class="flex items-center gap-3">
+                                            <div>
+                                                <img src="assets/images/clients/client6.jpg" class="w-10 rounded-full">
+                                            </div>
+                                            <div>
+                                                <h6>Cersei Lannister</h6>
+                                                <p class="text-sm text-slate-500">Senior Project Manager</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="flex gap-1 items-center text-yellow-500 text-base">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="swiper-slide">
+                                <div class="p-10 bg-white">
+                                    <p class="text-slate-800">Our site is beautiful! It is easy to navigate. The support has been remarkable for WordPress; if I don’t understand something, or can’t accomplish a task, Scryper is very responsive and they lead me in the correct way. Thrive is an extremely talented web design company. We are amazed by where traffic to our site comes from; we are a moderate-sized nonprofit and now we are having global visitors.</p>
+                                    <div class="border-b border-gray-200 w-full my-7"></div>
+                                    <div class="flex items-center justify-between mt-5">
+                                        <div class="flex items-center gap-3">
+                                            <div>
+                                                <img src="assets/images/clients/client7.jpg" class="w-10 rounded-full">
+                                            </div>
+                                            <div>
+                                                <h6>Cersei Lannister</h6>
+                                                <p class="text-sm text-slate-500">Senior Project Manager</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="flex gap-1 items-center text-yellow-500 text-base">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- =========== Testimonials Section End =========== -->
+
+
+    <!-- =========== Blog Section Start =========== -->
+    <section class="py-20">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="text-3xl font-medium my-3">Useful Reading</h1>
+                <p class="text-slate-500 mt-5 mb-4">Few articles to read to know more about cryptocurrency</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12">
+                <div>
+                    <a href="/2024-AI-initiatives.html">
+                        <div class="relative" data-aos="fade-up" data-aos-duration="300">
+                            <span class="absolute top-3 bg-orange-500 p-1 pe-6 text-sm font-semibold text-white" style="clip-path: polygon(0% 0%, 100% 0, 90% 49%, 100% 99%, 0% 100%);">New</span>
+                            <img src="assets/images/blog/2024-intitatives.jpg" class="rounded-md">
+                        </div>
+                        <p class="text-slate-500 mt-5">Jan 20 2024 . 5 min read</p>
+                        <h4 class="mt-1 text-lg font-bold">
+                            <a href="/2024-AI-initiatives.html" >2024 AI Initiatives</a>
+                        </h4>
+                    </a>
+                </div>
+                
+
+                <div>
+                    <a href="">
+                        <div class="relative" data-aos="fade-up" data-aos-duration="600">
+                            <span class="absolute top-3 bg-red-500 p-1 pe-6 text-sm font-semibold text-white" style="clip-path: polygon(0% 0%, 100% 0, 90% 49%, 100% 99%, 0% 100%);">Coming soon ...</span>
+                            <img src="assets/images/blog/icwe.jpg" class="rounded-md">
+                        </div>
+                        <p class="text-slate-500 mt-5">Jun 17 - Jun 20, 2024 . 8 min read</p>
+                        <h4 class="mt-1 text-lg font-bold">
+                            <a href="#">ICWE 2024 Edition</a>
+                        </h4>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="">
+                        <div class="relative" data-aos="fade-up" data-aos-duration="900">
+                            <span class="absolute top-3 bg-red-500 p-1 pe-6 text-sm font-semibold text-white" style="clip-path: polygon(0% 0%, 100% 0, 90% 49%, 100% 99%, 0% 100%);">Coming soon ...</span>
+                            <img src="assets/images/blog/ces2024.jpg" class="rounded-md">
+                        </div>
+                        <p class="text-slate-500 mt-5">Jan 9 - Jan 12, 2024 . 10 min read</p>
+                        <h4 class="mt-1 text-lg font-bold">
+                            <a href="#">2024 International CES</a>
+                        </h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =========== Blog Section End =========== -->
+
+    <!-- =========== Footer Section Starts =========== -->
+    <footer class="bg-gray-100">
+        <div class="border-b"></div>
+
+        <div class="container">
+
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-14 py-6">
+                <div>
+                    <a href="index.html">
+                        <img src="assets/images/logo-dark.png" class="h-8">
+                    </a>
+                    <p class="text-gray-500/80 mt-5 w-4/5">Our first objective is to fully understand what your requirements are so that we can craft the best solution for you. We use cutting-edge technologies to develop software and hardware with the highest industry standards!</p>
+                </div>
+
+                <div>
+                    <div class="flex flex-col sm:flex-row gap-14 flex-wrap sm:flex-nowrap justify-between">
+
+                        <div>
+                            <div class="flex flex-col gap-3">
+                                <h5 class="mb-3 uppercase">Company</h5>
+                                <div class="text-gray-500/80"><a href="/">Home</a></div>
+                                <div class="text-gray-500/80"><a href="/about-us.html">Abous Us</a></div>
+                                <div class="text-gray-500/80"><a href="/services.html">Services</a></div>
+                                <div class="text-gray-500/80"><a href="/#new">Demos</a></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex flex-col gap-3">
+                                <h5 class="mb-3 uppercase">Support</h5>
+                                <div class="text-gray-500/80"><a href="/privacy-policy.html">Privacy Policy</a></div>
+                                <div class="text-gray-500/80"><a href="/terms-and-conditions.html">Terms & Conditions</a></div>
+                                <div class="text-gray-500/80"><a href="/contact.html">Contact Us</a></div>
+								<div class="text-gray-500/80"><a href="/help.html">Help & FAQ's</a></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex flex-col gap-3">
+                                <h5 class="mb-3 uppercase">Address</h5>
+                                
+                                <div class="text-gray-500/80"><a href="javascript:void(0);">500 4TH ST NW, Albuquerque, NM, 87102</a></div>
+                                <div class="text-gray-500/80"><a href="javascript:void(0);">contact@scryper-dev.com</a></div>
+                                <div class="text-gray-500/80"><a href="javascript:void(0);">+1 (505) 394 – 9480</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-b"></div>
+
+            <div class="grid sm:grid-cols-2 text-center sm:text-start gap-6 py-5">
+                <div>
+                    <p class=" text-sm text-slate-500">
+                        <script>document.write(new Date().getFullYear())</script>© Scryper. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="flex justify-center sm:justify-end gap-7">
+                    <div>
+                        <a href="#">
+                            <svg class="w-5 h-5 text-slate-500/90 hover:text-primary transition-all" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <svg class="w-5 h-5 text-slate-500/90 hover:text-primary transition-all" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/company/scryper-dev/" target="_blank">
+                            <svg class="w-5 h-5 text-slate-500/90 hover:text-primary transition-all" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- =========== Footer Section Ends =========== -->
+
+    <!-- @@include('./partials/back-to-top.html') -->
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    
+    // var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    // (function(){
+    //     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    //     s1.async=true;
+    //     s1.src=process.env.APP_TAWK;//process.env.APP_TAWK;
+    //     s1.charset='UTF-8';
+    //     s1.setAttribute('crossorigin','*');
+    //     s0.parentNode.insertBefore(s1,s0);
+    // })();
+</script>
+<!--End of Tawk.to Script-->
+</html>
