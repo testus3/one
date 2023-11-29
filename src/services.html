@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Portfolio Grid Example"})
+
+    <!-- glightbox css -->
+    <link rel="stylesheet" href="assets/libs/glightbox/css/glightbox.min.css">
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body>
+
+    @@include('./partials/navbar.html', {"link-color": "light"})
+
+    <!-- =========== Hero Section Starts =========== -->
+    <section class="pt-36 pb-24 bg-slate-100">
+        <div class="container">
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="md:text-5xl/tight text-3xl font-semibold mb-5">Services</h2>
+                <p class="lg:text-lg/relaxed tracking-wider text-slate-500 leading-7">We use specific technologies according to your business model</p>
+            </div>
+        </div>
+    </section>
+    <!-- =========== Hero Section Ends =========== -->
+
+    <!-- =========== Filter Section Starts =========== -->
+    <section class="py-20 relative">
+        <div class="container">
+            <!-- <div>
+                <ul class="filter-options flex flex-wrap justify-center gap-2">
+                    <li class="inline-block active" data-group="all">
+                        <a href="javascript: void(0);">All</a>
+                    </li>
+                    <li class="inline-block" data-group="web-design">
+                        <a href="javascript: void(0);">Web Design</a>
+                    </li>
+                    <li class="inline-block" data-group="graphic-design">
+                        <a href="javascript: void(0);">Graphic Design</a>
+                    </li>
+                    <li class="inline-block" data-group="illustrator">
+                        <a href="javascript: void(0);">Illustrator</a>
+                    </li>
+                    <li class="inline-block" data-group="photography">
+                        <a href="javascript: void(0);">Photography</a>
+                    </li>
+                </ul>
+            </div> -->
+
+            <div id="gallery-wrapper" class="md:flex justify-center mx-auto mt-6  ">
+
+                <div class="lg:w-1/3 md:w-1/2 p-2 mb-5 picture-item" data-groups='["web-design"]'>
+                    <h4 class="text-lg/relaxed tracking-wider text-center mb-2 font-bold">Web Design</h4>
+                    <div>
+                        <div class="border p-2 rounded shadow">
+                            <p class="text-slate-400 mt-2">Innovative web design solutions, enhancing online presence. Our software company crafts visually stunning and user-friendly websites for optimal digital experiences and business success.</p>
+                            <div class="overflow-hidden mt-6 ">
+                                <a class="image-popup" href="assets/images/do/web-design-v2.jpg">
+                                    <img src="assets/images/do/web-design-v1.png" class="transition-all duration-500 origin-center hover:scale-[1.1]">
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/3 md:w-1/2 p-2 picture-item mb-5" data-groups='["web-design"]'>
+                    <h4 class="text-lg/relaxed tracking-wider text-center mb-2 font-bold">UI/UX Design</h4>
+                    <div>
+                        <div class="border p-2 rounded shadow">
+                            <p class="text-slate-400 mt-2">Leading UI/UX design firm creating seamless digital interactions. Elevate user experiences with our software company's intuitive designs for enhanced usability and aesthetic appeal for your business.</p>
+                            <div class="overflow-hidden mt-6 ">
+                                <a class="image-popup" href="assets/images/do/uiux-v2.jpg">
+                                    <img src="assets/images/do/uiux-v1.png" class="transition-all duration-500 origin-center hover:scale-[1.1]">
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/3 md:w-1/2 p-2 picture-item mb-5" data-groups='["web-design"]'>
+                    <h4 class="text-lg/relaxed tracking-wider text-center mb-2 font-bold">Front-end Development</h4>
+                    <div>
+                        <div class="border p-2 rounded shadow">
+                            <p class="text-slate-400 mt-2">Specializing in front-end excellence, our software company transforms designs into responsive, high-performance user interfaces, ensuring seamless and engaging digital experiences.
+                            </p>
+                            <div class="overflow-hidden mt-6">
+                                <a class="image-popup" href="assets/images/do/frontend-v2.jpg">
+                                    <img src="assets/images/do/frontend-v1.png" class="transition-all duration-500 origin-center hover:scale-[1.1]">
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/3 md:w-1/2 p-2 picture-item mb-5" data-groups='["web-design"]'>
+                    <h4 class="text-lg/relaxed tracking-wider text-center mb-2 font-bold">Back-end Development</h4>
+                    <div>
+                        <div class="border p-2 rounded shadow">
+                            <p class="text-slate-400 mt-2">Back-end mastery defines our software company. We architect robust, scalable solutions, powering applications with efficient server-side development for optimal performance and data management.
+                            </p>
+                            <div class="overflow-hidden mt-6 ">
+                                <a class="image-popup" href="assets/images/do/backend-v2.jpg">
+                                    <img src="assets/images/do/backend-v1.png" class="transition-all duration-500 origin-center hover:scale-[1.1]">
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/3 md:w-1/2 p-2 picture-item mb-5" data-groups='["web-design"]'>
+                    <h4 class="text-lg/relaxed tracking-wider text-center mb-2 font-bold">API Design</h4>
+                    <div>
+                        <div class="border p-2 rounded shadow">
+                            <p class="text-slate-400 mt-2">Crafting smooth connections, our software company specializes in API design. We architect and optimize interfaces, facilitating efficient communication and integration for enhanced software functionality.
+                            </p>
+                            <div class="overflow-hidden mt-6 ">
+                                <a class="image-popup" href="assets/images/do/api-v2.jpg">
+                                    <img src="assets/images/do/api.png" class="transition-all duration-500 origin-center hover:scale-[1.1]">
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/3 md:w-1/2 p-2 picture-item mb-5" data-groups='["web-design"]'>
+                    <h4 class="text-lg/relaxed tracking-wider text-center mb-2 font-bold">AI Web Integration</h4>
+                    <div>
+                        <div class="border p-2 rounded shadow">
+                            <p class="text-slate-400 mt-2">Pioneering AI web integration, our software company enhances online platforms with intelligent capabilities. Elevate user experiences through seamless integration of cutting-edge artificial intelligence technologies.</p>
+                            <div class="overflow-hidden mt-6 ">
+                                <a class="image-popup" href="assets/images/do/ai-v2.jpg">
+                                    <img src="assets/images/do/ai-v1.png" class="transition-all duration-500 origin-center hover:scale-[1.1]">
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- <div class="flex items-center justify-center mt-20">
+                <a href="#" class="py-3 px-6 rounded text-white bg-primary transition-all duration-500 hover:shadow-lg hover:shadow-primary/25 focus:outline focus:outline-primary/50"><i class="fa-solid fa-arrows-rotate me-2"></i> Load More</a>
+            </div> -->
+        </div>
+    </section>
+    <!-- =========== Filter Section Ends =========== -->
+
+    <!-- =========== Footer Section Starts =========== -->
+    <footer class="bg-gray-100">
+        <div class="container">
+            <div class="grid xl:grid-cols-5 gap-6 py-12">
+                <div class="xl:col-span-2">
+                    <a href="index.html">
+                        <img src="assets/images/logo-dark.png" class="h-8">
+                    </a>
+                    <p class="text-gray-500/80 mt-5 lg:w-4/5">Our first objective is to fully understand what your requirements are so that we can craft the best solution for you. We use cutting-edge technologies to develop software and hardware with the highest industry standards!</p>
+                </div>
+                <div class="xl:col-span-3 col-span-4">
+                    <div class="flex flex-col sm:flex-row gap-6 flex-wrap justify-between">
+                        <div>
+                            <div class="flex flex-col gap-3">
+                                <h5 class="mb-3 uppercase">Company</h5>
+                                <div class="text-gray-500/80"><a href="/">Home</a></div>
+                                <div class="text-gray-500/80"><a href="/about-us.html">Abous Us</a></div>
+                                <div class="text-gray-500/80"><a href="/services.html">Services</a></div>
+                                <div class="text-gray-500/80"><a href="/index.html#new">Demos</a></div>
+                            </div>
+                        </div>
+                        <!--								
+<div>
+                            <div class="flex flex-col gap-3">
+                                <h5 class="mb-3 uppercase">Knowledge Base</h5>
+                                <div class="text-gray-500/80"><a href="javascript:void(0);">Blog</a></div>
+                                <div class="text-gray-500/80"><a href="javascript:void(0);">Help Center</a></div>
+                                <div class="text-gray-500/80"><a href="javascript:void(0);">Sales Tools catalog</a></div>
+                                <div class="text-gray-500/80"><a href="javascript:void(0);">API</a></div>
+                            </div>
+                        </div>
+-->
+                        <div>
+                            <div class="flex flex-col gap-3">
+                                <h5 class="mb-3 uppercase">Support</h5>
+                                <div class="text-gray-500/80"><a href="/privacy-policy.html">Privacy Policy</a></div>
+                                <div class="text-gray-500/80"><a href="/terms-and-conditions.html">Terms & Conditions</a></div>
+                                <div class="text-gray-500/80"><a href="/contact.html">Contact Us</a></div>
+								<div class="text-gray-500/80"><a href="/help.html">Help & FAQ's</a></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex flex-col gap-3">
+                                <h5 class="mb-3 uppercase">Address</h5>
+                                
+                                <div class="text-gray-500/80"><a href="javascript:void(0);">500 4TH ST NW, Albuquerque, NM, 87102</a></div>
+                                <div class="text-gray-500/80"><a href="javascript:void(0);">contact@scryper-dev.com</a></div>
+                                <div class="text-gray-500/80"><a href="javascript:void(0);">+1 (505) 394 – 9480</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t py-6">
+                <div class="grid sm:grid-cols-2 text-center sm:text-start gap-6">
+                    <div>
+                        <p class="text-gray-500/80 text-sm">
+                            <script>document.write(new Date().getFullYear())</script>© Scryper. All rights reserved. 
+                        </p>
+                    </div>
+
+                    <div class="flex justify-center sm:justify-end gap-7">
+                        <div>
+                            <a href="#">
+                                <svg class="w-5 h-5 text-gray-500 hover:text-primary transition-all" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <svg class="w-5 h-5 text-gray-500 hover:text-primary transition-all" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/company/scryper-dev/" target="_blank">
+                                <svg class="w-5 h-5 text-gray-500 hover:text-primary transition-all" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- =========== Footer Section Ends =========== -->
+
+    @@include('./partials/back-to-top.html')
+
+    <!-- Shufflejs Plugin Js -->
+    <script src="assets/libs/shufflejs/shuffle.min.js"></script>
+
+    <!-- glightbox Plugin Js -->
+    <script src="assets/libs/glightbox/js/glightbox.min.js"></script>
+
+    <!-- Portfolio Masonary Js -->
+    <script src="assets/js/gallery.min.js"></script>
+
+    @@include('./partials/footer-scripts.html')
+
+</body>
+
+</html>
